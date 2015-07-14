@@ -11,7 +11,7 @@ public class Word2013Reader implements IFileReader {
 
 	@SuppressWarnings("resource")
 	public String reader(File file) throws Exception {
-		return new XWPFWordExtractor(POIXMLDocument.openPackage(file.getAbsolutePath())).getText();
+		return new XWPFWordExtractor(POIXMLDocument.openPackage(file.getAbsolutePath())).getText().trim();
 	}
 
 }
