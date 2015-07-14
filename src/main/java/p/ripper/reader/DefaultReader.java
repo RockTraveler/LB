@@ -6,7 +6,7 @@ import p.ripper.IReader.IFileReader;
 
 public class DefaultReader implements IFileReader{
 
-	public String reader(File f) {
+	public String reader(File file) {
 		return "defaultContent";
 	}
 

@@ -10,8 +10,8 @@ import p.ripper.IReader.IFileReader;
 public class Word2003Reader implements IFileReader {
 
 	@SuppressWarnings("resource")
-	public String reader(File f) throws Exception {
-		return new WordExtractor(new FileInputStream(f)).getText().trim();
+	public String reader(File file) throws Exception {
+		return new WordExtractor(new FileInputStream(file)).getText().trim();
 	}
 
 }

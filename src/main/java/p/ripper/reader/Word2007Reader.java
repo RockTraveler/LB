@@ -14,5 +14,4 @@ public class Word2007Reader implements IFileReader {
 		return new XWPFWordExtractor(POIXMLDocument.openPackage(file.getAbsolutePath())).getText().trim();
 	}
 
-
 }
