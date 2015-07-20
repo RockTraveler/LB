@@ -51,7 +51,7 @@ public class LuceneUtils {
 				String content =ctx.getFileReader().reader(file);
 				System.out.println(content);
 				doc.add(new Field("content", content, Field.Store.NO,
-						Field.Index.NOT_ANALYZED));
+						Field.Index.ANALYZED));
 				doc.add(new Field("filename", file.getName(), Field.Store.YES, Field.Index.NOT_ANALYZED));
 				doc.add(new Field("path", file.getAbsolutePath(), Field.Store.YES, Field.Index.NOT_ANALYZED));
 				writer.addDocument(doc);
@@ -75,15 +75,15 @@ public class LuceneUtils {
 		}
 	}
 
-	public void searcher() {
+	public void searcher(String searchContent) {
 		IndexSearcher searcher = null;
 		try {
 			Directory directory = FSDirectory.open(new File("D:\\index"));			//CONFIG
 			IndexReader indexReader = IndexReader.open(directory);
 			searcher = new IndexSearcher(indexReader);
 			QueryParser parser = new QueryParser(Version.LUCENE_35, "content", new StandardAnalyzer(Version.LUCENE_35));
-			Query query = parser.parse("vv");
-			TopDocs tds = searcher.search(query, 10);
+			Query query = parser.parse(searchContent);										
+			TopDocs tds = searcher.search(query, 1);
 			ScoreDoc[] scoreDocs = tds.scoreDocs;
 				for ( ScoreDoc scoreDoc : scoreDocs) {
 				Document document = searcher.doc(scoreDoc.doc);
