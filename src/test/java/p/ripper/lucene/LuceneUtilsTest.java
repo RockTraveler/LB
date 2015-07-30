@@ -12,7 +12,7 @@ public class LuceneUtilsTest {
 	public void testSearch()
 	{
 		LuceneUtils h1 = new LuceneUtils();
-		h1.searcher("red");
+		h1.searcher("greenccc");
 	}
 	
 	
