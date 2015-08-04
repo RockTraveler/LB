@@ -14,7 +14,7 @@ public class Context {
 	private IFileReader fileReader;
 
 	public Context(File file) {
-		
+		//add comment
 		String extendName = getExtendName(file.getName());
 		if(extendName.equals(".doc")){
 			this.fileReader=new Word2003Reader();

@@ -27,7 +27,7 @@ public class LuceneUtils {
 	private static StringBuffer  sb = new StringBuffer();
 	public void index() {
 		IndexWriter writer = null;
-		String paths=getDirectory(new File("D:\\test"));									//CONFIG
+		String paths=getDirectory(new File("D:\\test"));									//CONFIGGG
 		for (String path : paths.split(",")) {
 			doIndex(path,writer);
 		}
