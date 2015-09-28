@@ -18,6 +18,7 @@ import com.alibaba.fastjson.JSON;
  * @author sinaWeibo
  * 
  */
+@SuppressWarnings("all")
 public class HttpRestUtil implements java.io.Serializable {
 
 	static Logger log = Logger.getLogger(HttpRestUtil.class.getName());

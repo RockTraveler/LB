@@ -1,6 +1,5 @@
 package p.ripper.mail;
 
-import javax.mail.MessagingException;
 
 public class TestMailSender {
 

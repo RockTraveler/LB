@@ -14,6 +14,7 @@ import com.mongodb.MongoClient;
 import com.mongodb.ReadPreference;
 import com.mongodb.ServerAddress;
 
+@SuppressWarnings("all")
 public class MongoDB {
     public static void main(String[] args) {
 /*

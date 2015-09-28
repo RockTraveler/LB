@@ -2,7 +2,7 @@
 package p.ripper.map;
 import java.util.List;
 
-@SuppressWarnings("unchecked")
+@SuppressWarnings("all")
 public class Validator {
 
 	public static boolean equals(String s1, String s2) {

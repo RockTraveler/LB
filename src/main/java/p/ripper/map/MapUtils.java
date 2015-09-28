@@ -5,6 +5,7 @@ import org.docx4j.model.datastorage.XPathEnhancerParser.main_return;
 /**
  * Created by ripper on 15-9-15.
  */
+@SuppressWarnings("all")
 public class MapUtils {
 
     private static final  double EARTH_RADIUS = 6378137; //The earth's radius
